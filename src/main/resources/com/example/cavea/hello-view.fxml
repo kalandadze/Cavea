@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vbox" alignment="TOP_CENTER" prefHeight="411.0" prefWidth="685.0" stylesheets="@../../../StyleSheets/StyleSheet.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cavea.controllers.HelloController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="360.0" prefWidth="659.0" VBox.vgrow="ALWAYS">
+         <children>
+            <HBox alignment="TOP_CENTER" prefHeight="70.0" VBox.vgrow="SOMETIMES">
+               <children>
+                  <ImageView fx:id="logo" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#showMain" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@../../../images/logo-generic.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <Pane fx:id="pane" prefHeight="150.0" prefWidth="234.0" />
+                  <HBox fx:id="bttns" prefHeight="39.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="logIn" mnemonicParsing="false" onAction="#loginWindow" text="შესვლა" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="register" mnemonicParsing="false" onAction="#registerWindow" text="რეგისტრაცია" textAlignment="CENTER" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                     <HBox.margin>
+                        <Insets top="60.0" />
+                     </HBox.margin>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="-40.0" left="20.0" top="-40.0" />
+               </padding>
+            </HBox>
+            <TabPane fx:id="tabPane" cache="true" prefHeight="308.0" prefWidth="684.0" style="-fx-background-color: transparent;" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+              <tabs>
+                  <Tab text="მთავარი">
+                    <content>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="259.0" prefWidth="601.0" style="-fx-background-color: transparent;">
+                          <content>
+                              <VBox alignment="CENTER_LEFT" prefHeight="244.0" prefWidth="610.0" scaleShape="false" style="-fx-background-color: white;">
+                                 <children>
+                                    <ImageView fx:id="img" fitHeight="101.0" fitWidth="614.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@../../../images/b947767b-d1c4-4d4b-b811-fa198254a4e1vat1.jpg" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </ImageView>
+                                    <HBox alignment="CENTER" prefHeight="22.0" prefWidth="604.0" spacing="1.0" style="-fx-alignment: center;">
+                                       <children>
+                                          <RadioButton fx:id="btn_1" mnemonicParsing="false" onAction="#showImg1" selected="true">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </RadioButton>
+                                          <RadioButton fx:id="btn_2" mnemonicParsing="false" onAction="#showImg2">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </RadioButton>
+                                          <RadioButton fx:id="btn_3" mnemonicParsing="false" onAction="#showImg3">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </RadioButton>
+                                          <RadioButton fx:id="btn_4" mnemonicParsing="false" onAction="#showImg4">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </RadioButton>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="-25.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <Label fx:id="lbl1" prefHeight="37.0" prefWidth="615.0" style="-fx-background-color: rgb(214,214,214);" text="ახლა კინოთეატრებში" VBox.vgrow="ALWAYS">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" top="10.0" />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <FlowPane fx:id="flowPane" hgap="5.0" prefWidth="601.0" vgap="5.0" VBox.vgrow="ALWAYS" />
+                                 </children>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </VBox>
+                          </content>
+                           <padding>
+                              <Insets bottom="5.0" />
+                           </padding>
+                        </ScrollPane>
+                    </content>
+                  </Tab>
+                <Tab text="სეანსები">
+                     <content>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" pannable="true">
+                           <content>
+                              <VBox fx:id="seansees" prefHeight="200.0" prefWidth="100.0" spacing="15.0" />
+                           </content>
+                        </ScrollPane>
+                     </content>
+                </Tab>
+                <Tab text="ბილეთები">
+                  <content>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Button fx:id="tickets" mnemonicParsing="false" onAction="#loginWindow" prefHeight="260.0" prefWidth="627.0" style="-fx-background-color: transparant;" text="ბილეთების სანახავად აუცილებელია თქვენ ექაუნთზე შესვლა" wrapText="true">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </VBox>
+                  </content>
+                </Tab>
+                  <Tab text="IMAX">
+                    <content>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="267.0" prefWidth="600.0" style="-fx-background-color: transparent;">
+                          <content>
+                              <VBox prefHeight="927.0" prefWidth="626.0" spacing="10.0">
+                                 <children>
+                                    <ImageView fitHeight="138.0" fitWidth="324.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@../../../images/IMAX-logo.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets left="50.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                    <HBox prefHeight="62.0" prefWidth="501.0">
+                                       <children>
+                                          <ImageView fx:id="imax1" fitHeight="187.0" fitWidth="355.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../../../images/scre.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <Label prefHeight="187.0" prefWidth="225.0" text="IMAX–ის კინოთეატრში, ყველაფერი, ფილმიდან დაწყებული და თეატრის ტექნოლოგიითა და დიზაინით დამთავრებული, შექმნილია იმისთვის,რათა თქვენ დაიჯეროთ, რომ ფილმის ნაწილი ხართ" textAlignment="CENTER" wrapText="true">
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label text="ყველაზე ბუნებრივი 3დ განცდა: IMAX–ის 3D წარმოგიდენთ 3D უკონკურენტო სინათლისა და მკაფიოობის გამოსახულებას: ორი პროექტორის კომპლექტი ერთდროულად აგზავნის განსხვავებულ გამოსახულებას (მარცხენა და მარჯვენა თვალისთვის) ამრეკლავ ეკრანზე, რაც ყველაზე ბუნებრივ და „სახესთან ახლო“ 3D განცდას კინოთეატრებს შორის" textAlignment="CENTER" wrapText="true">
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ImageView fx:id="imax2" fitHeight="187.0" fitWidth="355.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../../../images/3dsc.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fx:id="imax3" fitHeight="187.0" fitWidth="355.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../../../images/sound.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <Label text="სულის შემძვრელი ხმა: IMAX–ის დაპატენტებული ხმის სისტემა გთავაზობთ სიმძლავრეში შეუდარებელ, 10–ჯერ უფრო დინამიური სივრცისა და ლაზერული სიზუსტის ჭეშმარიტად განსაცვიფრებელ განცდას, რომელსაც ადგილმდებარეობის მიუხედავად შეიგრძნობთ. IMAX იყენებს დაპატენტებულ(კუთვნილ) მიკროფონის სისტემას, რათა შემოწმდეს თითოეული არხი ხმის სისტემაში და ყოველდღიურად დარეგულირდეს ჟღერადობა იდეალური ხმის წარმოქმნის მიზნით" textAlignment="CENTER" wrapText="true">
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label text="თვალწარმტაცი გამოსახულება IMAX–ის დიდებული პროექციის სისტემა, გთავაზობთ განსაცვიფრებლად რეალურ და კრისტალურად მკაფიო გამოსახულების პროექციას (2დ თუ 3დ). თითოეული სისტემა მოიცავს დაპატენტებულ დისტანციურ სენსორებს, რომლებიც გამოსახულებას, მაყურებლის თვალის ანალოგიურად აღიქვამენ და საჭიროების შემთხვევაში რეალურ დროში აკორექტირებენ, რათა თქვენს წინაშე მუდამ იდეალური სურათი წარმოდგეს" textAlignment="CENTER" wrapText="true">
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ImageView fx:id="imax4" fitHeight="187.0" fitWidth="355.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../../../images/2scre.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                          </content>
+                        </ScrollPane>
+                    </content>
+                  </Tab>
+                  <Tab text="შეზღუდვები">
+                    <content>
+                        <ScrollPane prefHeight="284.0" prefWidth="600.0" style="-fx-background-color: transparent;">
+                          <content>
+                              <ImageView fx:id="restrictions" fitHeight="1043.0" fitWidth="614.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/cavearating.jpg" />
+                                 </image>
+                              </ImageView>
+                          </content>
+                        </ScrollPane>
+                    </content>
+                  </Tab>
+                  <Tab text="კონტაქტი">
+                    <content>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Button fx:id="contact" mnemonicParsing="false" onAction="#loginWindow" prefHeight="260.0" prefWidth="627.0" style="-fx-background-color: transparant;" text="საკონტაქტოდ აუცილებელია თქვენ ექაუნთზე შესვლა" wrapText="true">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </VBox>
+                    </content>
+                  </Tab>
+                  <Tab text="კინოთეატრები">
+                    <content>
+                        <ScrollPane fitToWidth="true" prefHeight="284.0" prefWidth="600.0" style="-fx-background-color: transparent;">
+                           <content>
+                              <ImageView fx:id="cinema" fitHeight="1438.0" fitWidth="666.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/our_cinemas_v4.jpg" />
+                                 </image>
+                              </ImageView>
+                           </content>
+                        </ScrollPane>
+                    </content>
+                  </Tab>
+                  <Tab text="წესები">
+                    <content>
+                        <ScrollPane fitToWidth="true" prefHeight="267.0" prefWidth="600.0" style="-fx-background-color: transparent;">
+                          <content>
+                              <ImageView fx:id="rules" fitHeight="811.0" fitWidth="640.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/terms-cavea.jpg" />
+                                 </image>
+                              </ImageView>
+                          </content>
+                        </ScrollPane>
+                    </content>
+                  </Tab>
+              </tabs>
+               <padding>
+                  <Insets bottom="-10.0" left="30.0" right="30.0" />
+               </padding>
+            </TabPane>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </VBox>
+      <VBox alignment="CENTER" cacheShape="false" centerShape="false" prefHeight="69.0" prefWidth="660.0" scaleShape="false" style="-fx-background-color: #d0349c;">
+         <children>
+            <HBox fx:id="bottm1" alignment="CENTER" prefHeight="34.0" prefWidth="600.0" spacing="5.0">
+               <children>
+                  <Label onMouseClicked="#showMain" text="მთავარი" />
+                  <Label onMouseClicked="#showSessions" text="სეანსები" />
+                  <Label onMouseClicked="#showTickets" text="ბილეთები" />
+                  <Label onMouseClicked="#showIMAX" text="IMAX" />
+                  <Label onMouseClicked="#showRestrictions" text="შეზღუდვები" />
+                  <Label onMouseClicked="#showContact" text="კონტაქტი" />
+                  <Label onMouseClicked="#showCinemas" text="კინოთეატრი" />
+                  <Label onMouseClicked="#showRules" text="წესები" />
+               </children>
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="31.0" prefWidth="660.0" spacing="5.0">
+               <children>
+                  <Label alignment="CENTER" text="Cavea.ge " textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Label text="© 2015-2018">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="30.0" right="30.0" />
+               </padding>
+            </HBox>
+         </children>
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+      </VBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</VBox>

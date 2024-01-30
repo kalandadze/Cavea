@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox fx:id="vbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="600.0" spacing="5.0" style="-fx-border-color: #d0349c; -fx-border-radius: 5px;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cavea.controllers.AccordionController">
+   <children>
+      <Label fx:id="tbilisi" prefHeight="39.0" prefWidth="616.0" text="კავეა თბილისი მოლი">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Line endX="489.29290771484375" startX="-100.0" stroke="#adaaaa" />
+      <FlowPane fx:id="tbilisiPane" hgap="5.0" vgap="5.0" />
+      <Label fx:id="saburtalo" prefHeight="39.0" prefWidth="600.0" text="კავეა სითი მოლი საბურთალო">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Line endX="489.29290771484375" startX="-100.0" stroke="#adaaaa" />
+      <FlowPane fx:id="saburtaloPane" hgap="5.0" vgap="5.0" />
+      <Label fx:id="eastPoint" prefHeight="39.0" prefWidth="625.0" text="კავეა ისთ ფოინთი">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Line endX="489.29290771484375" startX="-100.0" stroke="#adaaaa" />
+      <FlowPane fx:id="eastPointPane" hgap="5.0" vgap="5.0" />
+      <Label fx:id="galeria" prefHeight="39.0" prefWidth="609.0" text="კავეა გალერია">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Line endX="489.29290771484375" startX="-100.0" stroke="#adaaaa" VBox.vgrow="ALWAYS" />
+      <FlowPane fx:id="galeriaPane" hgap="5.0" vgap="5.0" />
+   </children>
+   <padding>
+      <Insets bottom="30.0" left="10.0" right="10.0" top="5.0" />
+   </padding>
+</VBox>

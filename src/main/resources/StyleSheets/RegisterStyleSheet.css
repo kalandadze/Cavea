@@ -1,0 +1,38 @@
+.root{
+    -fx-background-color: #ffffff;
+}
+.button{
+    -fx-font-size: 12px;
+    -fx-border-radius: 5px;
+}
+#register{
+    -fx-background-color: #d0349c;
+}
+.check-box .box {
+
+    -fx-background-color: white;
+    -fx-border-color:grey;
+    -fx-border-radius:3px; 
+    
+}
+.check-box:selected .mark {
+
+    -fx-background-color: white;
+    
+}
+    
+.check-box:selected .box {
+    -fx-background-color: #d0349c;
+}
+#authorization{
+    -fx-text-fill: blue;
+}
+#policy{
+    -fx-border-color:rgba(182, 181, 181, 0.452);
+    -fx-border-radius:3px; 
+    -fx-background-color:white;
+
+}
+.button:hover {
+    -fx-opacity: 0.6
+}

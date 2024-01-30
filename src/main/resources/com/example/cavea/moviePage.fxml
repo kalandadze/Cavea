@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<ScrollPane fx:id="pane" fitToWidth="true" pannable="true" prefHeight="301.0" prefWidth="623.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cavea.controllers.MoviePageController">
+   <content>
+      <VBox fx:id="vbox" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+         <children>
+            <WebView fx:id="trailer" prefHeight="255.0" prefWidth="600.0" />
+            <Label fx:id="lbl" prefWidth="600.0" style="-fx-background-color: rgb(214,214,214);" text="სეანსები - ყველა">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </Label>
+            <Accordion fx:id="accordion">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Accordion>
+         </children>
+         <padding>
+            <Insets left="10.0" right="10.0" top="5.0" />
+         </padding>
+      </VBox>
+   </content>
+</ScrollPane>

@@ -1,0 +1,8 @@
+.button:hover {
+    -fx-opacity: 0.6;
+    -fx-cursor: hand;
+}
+.button{
+    -fx-border-color: #d0349c;
+    -fx-border-radius: 5px;
+}

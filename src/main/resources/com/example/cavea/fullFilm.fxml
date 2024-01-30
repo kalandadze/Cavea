@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<HBox fx:id="hbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cavea.controllers.FullFilmController">
+   <children>
+      <ImageView fx:id="poster" fitHeight="297.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <ScrollPane fx:id="pane" pannable="true">
+         <content>
+            <VBox fx:id="vbox" />
+         </content>
+      </ScrollPane>
+   </children>
+</HBox>
